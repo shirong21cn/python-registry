@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 import sys
-from StringIO import StringIO
+import io
 from Registry import Registry, RegistryLog
 
 def print_test_testAAAA_testBBBB(reg):
@@ -30,7 +30,7 @@ primary_filepath = sys.argv[1]
 log1_filepath = sys.argv[2]
 log2_filepath = sys.argv[3]
 
-primary = StringIO()
+primary = io.StringIO()
 with open(primary_filepath, 'rb') as f:
     primary.write(f.read())
 
